@@ -1,5 +1,7 @@
 package main;
 
+import java.util.Objects;
+
 public class Student {
     public String name;
    public int id;
@@ -32,6 +34,18 @@ public class Student {
 
     public void setMarks(int marks) {
         this.marks = marks;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return id == student.id && marks == student.marks && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, id, marks);
     }
 
     @Override

@@ -16,7 +16,7 @@ public class Main {
             students[i]=new Student(name,id,marks);
         }
         for(Student s:students){
-            System.out.println(s);
+            System.out.println(s.toString());
         }
     }
 }
