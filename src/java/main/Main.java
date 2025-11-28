@@ -15,8 +15,13 @@ public class Main {
             int marks=sc.nextInt();
             students[i]=new Student(name,id,marks);
         }
+        double avg=0;
         for(Student s:students){
-            System.out.println(s);
+            avg+=s.marks/n;
         }
+        System.out.println("average marks :"+avg);
+
+
+
     }
 }
