@@ -17,7 +17,7 @@ public class Main {
         }
         double avg=0;
         for(Student s:students){
-            avg+=s.marks/n;
+            System.out.println(s.toString());
         }
         System.out.println("average marks :"+avg);
 
